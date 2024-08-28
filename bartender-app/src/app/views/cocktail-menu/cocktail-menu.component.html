@@ -1,0 +1,17 @@
+<h2>Cocktail Menu</h2>
+<ul>
+  <li *ngFor="let cocktail of cocktails">
+    {{cocktail.name}} - {{cocktail.price | currency}} 
+    <br>
+    Ingredients: {{cocktail.ingredients}}
+    <br>
+    <button  class="button-36" (click)="placeOrder(cocktail.name)">Order a {{ cocktail.name }}</button>
+    <br>
+  </li>
+  <br>
+</ul>
+
+
+
+
+

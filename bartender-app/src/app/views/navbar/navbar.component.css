@@ -1,0 +1,41 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #b0b0e2;
+    color: #000000;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar-brand h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .navbar-links {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .nav-button {
+    background-color: transparent;
+    color: #000000;
+    border: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: blanchedalmond;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-button:hover {
+    background-color: #444;
+    border-radius: 4px;
+  }
+  
+  .navbar-actions {
+    position: relative;
+  }
+  

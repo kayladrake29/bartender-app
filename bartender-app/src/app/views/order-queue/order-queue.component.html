@@ -1,0 +1,11 @@
+<h2>Order Queue</h2>
+<ol>
+  <li *ngFor="let order of orders">
+    {{ order.cocktailName }} - {{ order.status }}
+    <button (click)="updateOrderStatus(order.id, 'preparing')">Mark as Preparing</button>
+    <button (click)="updateOrderStatus(order.id, 'ready')">Mark as Ready</button>
+  </li>
+</ol>
+
+
+
