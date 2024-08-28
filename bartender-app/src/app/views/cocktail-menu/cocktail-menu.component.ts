@@ -20,7 +20,7 @@ export class CocktailMenuComponent {
   cocktails: { id: number; name: string; ingredients: string[]; price: number }[] = [];
   orders: Order[] = [];
 
- constructor(private orderService: OrderService) { } // Inject the service
+ constructor(private orderService: OrderService) { }
  ngOnInit(): void {
   this.loadCocktails();
 }
@@ -36,7 +36,7 @@ export class CocktailMenuComponent {
 placeOrder(cocktailName: string) {
   this.orderService.placeOrder(cocktailName).subscribe(order => {
     this.orders.push(order);
-    alert(`Order placed`);
+    alert(`Order placed! Your order id is ${order.id}`);
     console.log(this.loadOrders());
   })}
 

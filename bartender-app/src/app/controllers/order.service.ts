@@ -17,18 +17,22 @@ export class OrderService {
   constructor() { }
 
   private cocktails= [
-    { id: 1, name: 'Margarita', ingredients: ['Tequila', 'Lime', 'Triple sec'], price: 10 },
-    { id: 2, name: 'Mojito', ingredients: ['Rum', 'Mint', 'Sugar'], price: 8 },
+    { id: 1,name: 'Whiskey Sour', ingredients: ['Whiskey', 'Lemon Juice', 'Sugar', 'Egg White'], price: 13 },
+  { id: 2, name: 'Bloody Mary', ingredients: ['Vodka', 'Tomato Juice', 'Lemon', 'Tabasco', 'Worcestershire Sauce'], price: 12 },
+  { id: 3, name: 'Old Fashioned', ingredients: ['Bourbon', 'Bitters', 'Sugar', 'Orange Twist'], price: 15 },
+  { id: 4, name: 'Cosmopolitan', ingredients: ['Vodka', 'Triple sec', 'Cranberry Juice', 'Lime'], price: 14 },
+  { id: 5, name: 'Pina Colada', ingredients: ['White Rum', 'Coconut Cream', 'Pineapple Juice'], price: 13 },
+  { id: 6, name: 'Martini', ingredients: ['Gin', 'Dry Vermouth', 'Olive'], price: 12 },
+  { id: 7, name: 'Daiquiri', ingredients: ['White Rum', 'Lime', 'Sugar'], price: 11 },
+ 
   ];
 
   private orders: Order[] = [];
   
-  // Get the list of cocktails
   getCocktails(): Observable<{ id: number; name: string; ingredients: string[]; price: number }[]> {
     return of(this.cocktails);
   }
 
-  // Place a new order
   placeOrder(cocktailOrder: string): Observable<Order> {
     
     const newOrder: Order = {

@@ -1,6 +1,6 @@
 <h2>Order Queue</h2>
-<ol>
+<ul>
   <li *ngFor="let order of orders">
-    {{ order.cocktailName }} - {{ order.status }}
+    # {{order.id}}: {{ order.cocktailName }} - {{ order.status }}
   </li>
-</ol>
+</ul>

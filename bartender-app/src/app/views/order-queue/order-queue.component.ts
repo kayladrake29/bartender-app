@@ -25,6 +25,9 @@ export class OrderQueueComponent implements OnInit {
     this.orderService.getOrders().subscribe(orders => this.orders = orders);
   }
 
+  getActiveOrders(): Order[] {
+    return this.orders.filter(order => order.status !== 'ready');
+  }
   
 
   updateOrderStatus(orderId: number, status: 'pending' | 'preparing' | 'ready'): void {

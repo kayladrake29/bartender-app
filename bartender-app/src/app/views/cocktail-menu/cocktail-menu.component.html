@@ -3,7 +3,7 @@
   <li *ngFor="let cocktail of cocktails">
     {{cocktail.name}} - {{cocktail.price | currency}} 
     <br>
-    Ingredients: {{cocktail.ingredients}}
+    Ingredients: {{cocktail.ingredients.join(', ')}}
     <br>
     <button  class="button-36" (click)="placeOrder(cocktail.name)">Order a {{ cocktail.name }}</button>
     <br>
